@@ -1,15 +1,15 @@
 ## Linux Instructions if you want to generate Javascript Bundle yourself:
 1. install nvm: https://github.com/nvm-sh/nvm
-3. install npm
+2. install npm
 ```bash
 nvm install --lts=dubnium
 nvm use --lts=dubnium
 ```
-4. fix npm issues, if any 
+3. fix npm issues, if any 
 ```bash
 npm audit fix
 ```
-5. generate a bundle
+4. generate a bundle
 ```bash
 echo "Setting max RAM amount so Vue compiles"
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p && sudo sysctl --system
