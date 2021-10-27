@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <ApiTestForm msg="Welcome to Your Vue.js + TypeScript App" />
+  <ApiTestForm />
 </template>
 
 <script lang="ts">

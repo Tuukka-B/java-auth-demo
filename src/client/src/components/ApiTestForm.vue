@@ -41,7 +41,6 @@ interface ApiTestFormData {
 
 @Options({
   props: {
-    msg: String,
   },
 })
 export default class ApiTestForm extends Vue {
