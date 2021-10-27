@@ -22,7 +22,7 @@ public class HelloController {
          * System.out.println(userPass);
          */
         if (creds[1].equals(hashed) && creds[0].equals("api-user")) {
-            System.out.println("Password matches! Printing received data...");
+            System.out.println("Credentials match! Printing received data...");
             data.forEach((k, v) -> System.out.println((k + ": " + v)));
         }
         else
