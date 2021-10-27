@@ -63,13 +63,14 @@ export default class ApiTestForm extends Vue {
       inputs.forEach((elem: HTMLInputElement) => {
         data[elem.id as string] = elem.value;
       });
-      console.log("sent data:");
-      console.log(data);
       let username = (data.username as string).trim();
       let password = (data.password as string).trim();
       delete(data.username);
       delete(data.password);
       delete(data.submitBtn);
+      console.log("Sent data (does not include authentication headers):");
+      console.log(data);
+      console.log("Authentication information will be created from the password and the username");
       this.generateMessage(username, password, data);
     })
   }
