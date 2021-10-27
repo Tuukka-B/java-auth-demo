@@ -14,6 +14,7 @@ npm audit fix
 echo "Setting max RAM amount so Vue compiles"
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p && sudo sysctl --system
 cd <project root>/src/client
+npm i
 npm run build
 ```
 
