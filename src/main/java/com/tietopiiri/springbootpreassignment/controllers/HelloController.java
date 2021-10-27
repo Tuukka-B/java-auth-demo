@@ -9,11 +9,15 @@ import java.util.Map;
 public class HelloController {
 
     @PostMapping("/post-data")
-    public void getData(@RequestHeader("Authorization") String suppliedPassword, @RequestBody Map<String, String> data) {
+    public void getData(@RequestHeader("Authorization") String suppliedCredentials, @RequestBody Map<String, String> data) {
+
         /* hard-coded stuff */
         String salt = "$2a$10$eMwbUMmFcP78eUAix65gFe";
-        String[] creds = suppliedPassword.split(":");
         String hashed = BCrypt.hashpw("Q29uZ3JhdHNPbkZpbmRpbmdUaGlzRWFzdGVyRWdnIQ==", salt).strip();
+        /* hard coded stuff ends */
+
+        String[] suppliedCredsArr = suppliedCredentials.split(":");
+
         /* debug
          *
          * System.out.println("Password");
@@ -21,17 +25,17 @@ public class HelloController {
          * System.out.println("User-supplied Password");
          * System.out.println(userPass);
          */
-        if (creds[1].equals(hashed) && creds[0].equals("api-user")) {
+
+        if (suppliedCredsArr[1].equals(hashed) && suppliedCredsArr[0].equals("api-user")) {
             System.out.println("Credentials match! Printing received data...");
             data.forEach((k, v) -> System.out.println((k + ": " + v)));
-        }
-        else
-            throw new ForbiddenException();
+        } else
+            throw new UnAuthorizedException();
 
     }
 
     @ResponseStatus(value= HttpStatus.UNAUTHORIZED, reason="Authentication failed")  // 401
-    public class ForbiddenException extends RuntimeException {
+    public class UnAuthorizedException extends RuntimeException {
         // ...
     }
 

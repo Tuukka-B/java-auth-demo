@@ -137,7 +137,9 @@ export default class ApiTestForm extends Vue {
 
       })
       let resultElem = this.$refs.results as HTMLDivElement;
-      response.then( async(response: Response) => {this.afterApiRequestSuccess(response, resultElem)}, async (reason: any) => {this.afterApiRequestFailure(reason, resultElem)})
+      response.then( 
+        async(response: Response) => {this.afterApiRequestSuccess(response, resultElem)}, 
+        async (reason: any) => {this.afterApiRequestFailure(reason, resultElem)})
   }
 }
 </script>
