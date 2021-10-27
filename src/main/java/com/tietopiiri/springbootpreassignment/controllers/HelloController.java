@@ -30,7 +30,7 @@ public class HelloController {
 
     }
 
-    @ResponseStatus(value= HttpStatus.UNAUTHORIZED, reason="Forbidden")  // 401
+    @ResponseStatus(value= HttpStatus.UNAUTHORIZED, reason="Authentication failed")  // 401
     public class ForbiddenException extends RuntimeException {
         // ...
     }
