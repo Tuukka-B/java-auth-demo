@@ -100,7 +100,6 @@ export default class ApiTestForm extends Vue {
       (this.$data as ApiTestFormData).result = "none";
       }
         }, 5000);
-    (this.$refs.myForm as HTMLFormElement).reset();
       
   }
 
