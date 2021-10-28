@@ -117,12 +117,11 @@ export default class ApiTestForm extends Vue {
 
   generateMessage(user:string, pass: string, data: Record<string, string>){
     let headers = new Headers();
-    headers.set('Authorization', 'Basic ' + user + ":" + pass);
-    headers.append('Content-Type', 'application/json');
-    headers.append('Access-Control-Allow-Origin', 'https://localhost:8080')
     let salt = "$2a$10$eMwbUMmFcP78eUAix65gFe"
     bcrypt.hash(pass, salt, (err: Error, hash: string) => {
       headers.set('Authorization', user + ":" + hash);
+      headers.append('Content-Type', 'application/json');
+      headers.append('Access-Control-Allow-Origin', 'https://localhost:8080')
       this.sendData(headers, data)
     });     
   }
