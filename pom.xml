@@ -8,11 +8,11 @@
 		<version>2.5.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.tietopiiri</groupId>
-	<artifactId>spring-boot-pre-assignment</artifactId>
+	<groupId>com.tuukka</groupId>
+	<artifactId>java-auth-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-pre-assignment</name>
-	<description>Pre-Assignment for Tietopiiri</description>
+	<name>java-auth-demo</name>
+	<description>Java Authentication Demo</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

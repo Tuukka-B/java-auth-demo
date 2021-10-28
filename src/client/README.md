@@ -1,4 +1,4 @@
-# pre-assignment-frontend
+# Java Auth Demo Frontend
 
 ## Project setup
 ```

@@ -1,4 +1,4 @@
-package com.tietopiiri.springbootpreassignment.controllers;
+package com.tuukka.javaauthdemo.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

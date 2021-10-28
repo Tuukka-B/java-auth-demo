@@ -1,10 +1,10 @@
-package com.tietopiiri.springbootpreassignment;
+package com.tuukka.javaauthdemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootPreAssignmentApplicationTests {
+class JavaAuthDemoApplicationTests {
 
 	@Test
 	void contextLoads() {

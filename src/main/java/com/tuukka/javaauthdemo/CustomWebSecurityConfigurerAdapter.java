@@ -1,5 +1,5 @@
 
-package com.tietopiiri.springbootpreassignment;
+package com.tuukka.javaauthdemo;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
