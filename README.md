@@ -24,6 +24,6 @@ sudo apt install openjdk-11-jre-headless
 sudo apt install maven
 cd <project root path>
 mvn clean install
-java -jar target/spring-boot-pre-assignment-0.0.1-SNAPSHOT.jar
+java -jar target/java-auth-demo-0.0.1-SNAPSHOT.jar
 ```
 Then go to http://localhost:8080/index.html and start testing!
