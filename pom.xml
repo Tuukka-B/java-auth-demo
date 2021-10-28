@@ -80,7 +80,28 @@
 					</execution>
 				</executions>
 			</plugin>
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<phase>clean</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<delete>
+									<fileset dir="src/main/resources/public/css" includes="**" />
+									<fileset dir="src/main/resources/public/img" includes="**" />
+									<fileset dir="src/main/resources/public/js" includes="**" />
+								</delete>
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 
